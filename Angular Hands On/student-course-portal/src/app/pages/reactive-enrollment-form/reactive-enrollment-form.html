@@ -1,0 +1,70 @@
+<h2>Reactive Enrollment Request</h2>
+
+<form [formGroup]="enrollForm"
+      (ngSubmit)="onSubmit()">
+
+  <!-- Student Name -->
+  <label>Student Name</label>
+  <br>
+
+  <input
+    type="text"
+    formControlName="studentName">
+
+  <br><br>
+
+  <!-- Student Email -->
+  <label>Student Email</label>
+  <br>
+
+  <input
+    type="email"
+    formControlName="studentEmail">
+
+  <br><br>
+
+  <!-- Course ID -->
+  <label>Course ID</label>
+  <br>
+
+  <input
+    type="number"
+    formControlName="courseId">
+
+  <br><br>
+
+  <!-- Preferred Semester -->
+  <label>Preferred Semester</label>
+  <br>
+
+  <select formControlName="preferredSemester">
+
+    <option value="Odd">Odd</option>
+    <option value="Even">Even</option>
+
+  </select>
+
+  <br><br>
+
+  <!-- Agree to Terms -->
+  <label>
+
+    <input
+      type="checkbox"
+      formControlName="agreeToTerms">
+
+    I agree to the Terms
+
+  </label>
+
+  <br><br>
+
+  <button
+    type="submit"
+    [disabled]="enrollForm.invalid">
+
+    Submit
+
+  </button>
+
+</form>

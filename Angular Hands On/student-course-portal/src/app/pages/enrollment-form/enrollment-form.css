@@ -1,0 +1,22 @@
+/* Invalid fields after user touches them */
+.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+/* Valid fields after user touches them */
+.ng-valid.ng-touched {
+  border: 2px solid green;
+}
+
+/* Error messages */
+span {
+  color: red;
+  font-size: 13px;
+}
+
+/* Success message */
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+}
